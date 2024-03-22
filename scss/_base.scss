@@ -1,0 +1,33 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+a,
+a:hover,
+a:visited {
+    color: $text;
+    text-decoration: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+//test reset //
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    /*alignement correct des images*/
+}
+
+body {
+    font-size: 1.6rem; /* 16px par défaut */
+    font-family: "Metal Mania", system-ui; // police par défaut//
+    background-color: $background;
+    color: $text;
+}
