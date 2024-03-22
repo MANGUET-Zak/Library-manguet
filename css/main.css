@@ -120,7 +120,7 @@ header p.burger::before {
 
 /*** Menu à déployer **********/
 header nav {
-  z-index: 10; /* Pour placer le menu au-dessus des autres éléments */
+  z-index: 999; /* Pour placer le menu au-dessus des autres éléments */
   position: absolute; /* Pour créer un calque spécial pour le menu */
   top: 0; /* position en y*/
   left: -100vw; /* position en x */
@@ -166,7 +166,7 @@ header nav ul a {
   text-decoration: none;
 }
 header nav ul a:visited {
-  color: #0D1137;
+  color: #64FF57;
 }
 
 header nav ul a:hover {
@@ -205,4 +205,83 @@ header nav ul a:hover {
     border-color: #ffffff;
     background-color: #000000;
   }
+}
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rem;
+  color: #000000;
+  width: 100vw;
+  min-height: 100dvh;
+}
+.presentation__titre {
+  font-size: 10vw;
+  font-weight: bold;
+  font-style: italic;
+  z-index: 1;
+  filter: drop-shadow(2px 1px 4px #ffffff);
+}
+.presentation__color {
+  color: #4F4481;
+}
+.presentation__text {
+  width: 70vw;
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 3rem;
+  z-index: 1;
+  filter: drop-shadow(2px 1px 4px #ffffff);
+}
+.presentation__change {
+  color: #4F4481;
+}
+.presentation__btn {
+  width: 15rem;
+  height: 4rem;
+  z-index: 1;
+  background-color: #4F4481;
+  color: #d5d5d4;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-family: "Metal Mania", system-ui;
+  border: none;
+  margin-top: 3.5rem;
+}
+.presentation__btn-change {
+  color: #64FF57;
+}
+.presentation__img {
+  width: 40vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.boxes {
+  width: 40%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 150rem;
+}
+
+.box {
+  transform-style: preserve-3d;
+  transform: rotateY(45deg) rotateX(30deg);
+}
+
+.box div {
+  width: 7rem;
+  height: 7rem;
+  background-color: #4F4481;
+  position: absolute;
+}
+
+.top-side {
+  transform: rotateX(90deg) translateZ(35rem);
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */

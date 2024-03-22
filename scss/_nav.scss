@@ -1,3 +1,5 @@
+
+
 header {
     position: fixed;
     top:0px;
@@ -33,7 +35,7 @@ header p.burger::before {
 /*** Menu à déployer **********/
 
 header nav{
-    z-index: 10 ; /* Pour placer le menu au-dessus des autres éléments */
+    z-index: 999 ; /* Pour placer le menu au-dessus des autres éléments */
     position: absolute ; /* Pour créer un calque spécial pour le menu */
     top : 0 ;  /* position en y*/
     left : -100vw ; /* position en x */
