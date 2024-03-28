@@ -216,7 +216,7 @@ header nav ul a:hover {
   min-height: 100dvh;
 }
 .presentation__titre {
-  font-size: 10vw;
+  font-size: 5rem;
   font-weight: bold;
   font-style: italic;
   z-index: 1;
@@ -227,7 +227,7 @@ header nav ul a:hover {
 }
 .presentation__text {
   width: 70vw;
-  font-size: 3vw;
+  font-size: 2rem;
   text-align: center;
   margin-top: 3rem;
   z-index: 1;
@@ -265,175 +265,153 @@ header nav ul a:hover {
   z-index: 0;
 }
 
-.boxes {
-  margin-top: 25vh;
-  width: 40%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  perspective: 150rem;
-}
-
-.active.box {
-  top: 0;
-  left: 0;
-  transition: all 0.5s;
-}
-
-.box {
-  transform-style: preserve-3d;
-  transform: rotateY(45deg) rotateX(30deg);
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-@keyframes boxAnim {
-  0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
+@media screen and (min-width: 1024px) {
+  .presentation__titre {
+    font-size: 10vw;
   }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  .presentation__text {
+    font-size: 3vw;
   }
-}
-.box-1 {
-  left: -25rem;
-  top: -6rem;
-  animation: boxAnim 100s infinite linear;
-}
-
-.box-2 {
-  left: -11rem;
-  top: -23rem;
-  animation: boxAnim 100s -10s infinite linear;
-}
-
-.box-3 {
-  left: 10rem;
-  top: -23rem;
-  animation: boxAnim 100s -20s infinite linear;
-}
-
-.box-4 {
-  left: 25rem;
-  top: -6rem;
-  animation: boxAnim 100s -30s infinite linear;
-}
-
-.box-5 {
-  left: 22rem;
-  top: 13rem;
-  animation: boxAnim 100s -40s infinite linear;
-}
-
-.box-6 {
-  left: 0;
-  top: 25rem;
-  animation: boxAnim 100s -50s infinite linear;
-}
-
-.box-7 {
-  left: -21rem;
-  top: 14rem;
-  animation: boxAnim 100s -60s infinite linear;
-}
-
-.active.box div {
-  width: 16rem;
-  height: 16rem;
-  transition: all 0.2s 0.5s ease-in-out;
-}
-
-.box div {
-  width: 7rem;
-  height: 7rem;
-  background-color: #4F4481;
-  position: absolute;
-  opacity: 0.8;
-  box-shadow: 0.1rem 0.1rem 0.1rem #eee inset, -0.1rem -0.1rem 0.1rem #eee inset, 0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2), -0.1rem -0.1rem 3.5rem rgba(255, 255, 255, 0.2);
-}
-
-.box-1 div {
-  background-color: #64FF57;
-}
-
-.box-2 div {
-  background-color: #4F4481;
-}
-
-.box-3 div {
-  background-color: #2368FB;
-}
-
-.box-4 div {
-  background-color: #FF321A;
-}
-
-.box-5 div {
-  background-color: #FE86FF;
-}
-
-.box-6 div {
-  background-color: #04EEFF;
-}
-
-.box-7 div {
-  background-color: #FFCD01;
-}
-
-.top-side {
-  transform: rotateX(90deg) translateZ(3.5rem);
-}
-
-.bottom-side {
-  transform: rotateX(90deg) translateZ(-3.5rem);
-}
-
-.front-side {
-  transform: translateZ(3.5rem);
-}
-
-.back-side {
-  transform: translateZ(-3.5rem);
-}
-
-.right-side {
-  transform: rotateY(-90deg) translateX(3.5rem);
-  transform-origin: right;
-}
-
-.left-side {
-  transform: rotateY(90deg) translateX(-3.5rem);
-  transform-origin: left;
-}
-
-.active .top-side {
-  transform: rotateX(90deg) translateZ(8rem);
-}
-
-.active .bottom-side {
-  transform: rotateX(90deg) translateZ(-8rem);
-}
-
-.active .front-side {
-  transform: translateZ(8rem);
-}
-
-.active .back-side {
-  transform: translateZ(-8rem);
-}
-
-.active .right-side {
-  transform: rotateY(-90deg) translateX(8rem);
-  transform-origin: right;
-}
-
-.active .left-side {
-  transform: rotateY(90deg) translateX(-8rem);
-  transform-origin: left;
+  .boxes {
+    margin-top: 25vh;
+    width: 40%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 150rem;
+  }
+  .active.box {
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+  }
+  .box {
+    transform-style: preserve-3d;
+    transform: rotateY(45deg) rotateX(30deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  @keyframes boxAnim {
+    0% {
+      transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  .box-1 {
+    left: -25rem;
+    top: -6rem;
+    animation: boxAnim 100s infinite linear;
+  }
+  .box-2 {
+    left: -11rem;
+    top: -23rem;
+    animation: boxAnim 100s -10s infinite linear;
+  }
+  .box-3 {
+    left: 10rem;
+    top: -23rem;
+    animation: boxAnim 100s -20s infinite linear;
+  }
+  .box-4 {
+    left: 25rem;
+    top: -6rem;
+    animation: boxAnim 100s -30s infinite linear;
+  }
+  .box-5 {
+    left: 22rem;
+    top: 13rem;
+    animation: boxAnim 100s -40s infinite linear;
+  }
+  .box-6 {
+    left: 0;
+    top: 25rem;
+    animation: boxAnim 100s -50s infinite linear;
+  }
+  .box-7 {
+    left: -21rem;
+    top: 14rem;
+    animation: boxAnim 100s -60s infinite linear;
+  }
+  .active.box div {
+    width: 16rem;
+    height: 16rem;
+    transition: all 0.2s 0.5s ease-in-out;
+  }
+  .box div {
+    width: 7rem;
+    height: 7rem;
+    background-color: #4F4481;
+    position: absolute;
+    opacity: 0.8;
+    box-shadow: 0.1rem 0.1rem 0.1rem #eee inset, -0.1rem -0.1rem 0.1rem #eee inset, 0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2), -0.1rem -0.1rem 3.5rem rgba(255, 255, 255, 0.2);
+  }
+  .box-1 div {
+    background-color: #64FF57;
+  }
+  .box-2 div {
+    background-color: #4F4481;
+  }
+  .box-3 div {
+    background-color: #2368FB;
+  }
+  .box-4 div {
+    background-color: #FF321A;
+  }
+  .box-5 div {
+    background-color: #FE86FF;
+  }
+  .box-6 div {
+    background-color: #04EEFF;
+  }
+  .box-7 div {
+    background-color: #FFCD01;
+  }
+  .top-side {
+    transform: rotateX(90deg) translateZ(3.5rem);
+  }
+  .bottom-side {
+    transform: rotateX(90deg) translateZ(-3.5rem);
+  }
+  .front-side {
+    transform: translateZ(3.5rem);
+  }
+  .back-side {
+    transform: translateZ(-3.5rem);
+  }
+  .right-side {
+    transform: rotateY(-90deg) translateX(3.5rem);
+    transform-origin: right;
+  }
+  .left-side {
+    transform: rotateY(90deg) translateX(-3.5rem);
+    transform-origin: left;
+  }
+  .active .top-side {
+    transform: rotateX(90deg) translateZ(8rem);
+  }
+  .active .bottom-side {
+    transform: rotateX(90deg) translateZ(-8rem);
+  }
+  .active .front-side {
+    transform: translateZ(8rem);
+  }
+  .active .back-side {
+    transform: translateZ(-8rem);
+  }
+  .active .right-side {
+    transform: rotateY(-90deg) translateX(8rem);
+    transform-origin: right;
+  }
+  .active .left-side {
+    transform: rotateY(90deg) translateX(-8rem);
+    transform-origin: left;
+  }
 }/*# sourceMappingURL=main.css.map */
