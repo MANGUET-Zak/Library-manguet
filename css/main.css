@@ -65,7 +65,6 @@ html {
 a,
 a:hover,
 a:visited {
-  color: #000000;
   text-decoration: none;
 }
 
@@ -414,4 +413,109 @@ header nav ul a:hover {
     transform: rotateY(90deg) translateX(-8rem);
     transform-origin: left;
   }
+}
+.page {
+  margin-top: 20rem;
+}
+
+.boutons {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #000000;
+  width: 100vw;
+  padding: 2.4rem;
+  gap: 5rem;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bouton {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.bouton__1 {
+  text-align: center;
+  background-color: #6f9ef6;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.bouton__1:hover {
+  background-color: #906109;
+}
+.bouton__2 {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  box-shadow: #000 0 1px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.bouton__2:hover {
+  box-shadow: #000 0 4px 12px 0;
+  transform: translateY(-1px);
+}
+.bouton__3 {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #e93a3a;
+  background: linear-gradient(144deg, #e93a3a 60%, #fda1a1 80%);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: #4e1313 0 2px 4px, #4e1313 0 7px 13px -3px, #4e1313 0 -3px 0 inset;
+  padding: 1rem 1.5rem;
+  transition: box-shadow 0.15s, transform 0.15s;
+  will-change: box-shadow, transform;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.bouton__3:hover {
+  box-shadow: #4e1313 0 4px 8px, #4e1313 0 7px 13px -3px, #e93a3a 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.bouton__3:active {
+  box-shadow: #e93a3a 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.bouton__4 {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  box-shadow: transparent 0 0 0 3px, #000 0 3px 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.bouton__4:hover {
+  box-shadow: #000 0 0 0 3px, transparent 0 0 0 0;
+  border: 2px solid #000;
+}
+.bouton__5 {
+  background-color: #fff;
+  color: #000;
+  border-radius: 40rem;
+  box-shadow: #a6a9ac 0 -12px 6px inset;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.bouton__5:hover {
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+.bouton__5:active {
+  transform: scale(1.025);
 }/*# sourceMappingURL=main.css.map */
