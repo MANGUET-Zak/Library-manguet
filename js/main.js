@@ -22,3 +22,57 @@ function fermerMenu(){ //évènement //
 }
 
 // fin menu burber //
+
+//début animation page Présentation //
+
+const boxes = document.querySelectorAll(".box");
+const heading = document.querySelector(".presentation__text--heading span");
+const btn = document.querySelector(".presentation__btn");
+const btnHeading = document.querySelector(".presentation__btn span");
+
+const colors = ["#64FF57", "#4F4481", "#2368FB", "#FF321A", "#FE86FF", "#04EEFF", "#FFCD01"];
+
+const techs = ["Présentation", "Boutons", "Effet Parrallax", "Toggle", "Effet JS", "3D", "Contact"];
+
+const url = ["index.html", "boutons.html", "effetParrallax.html", "toggle.html", "effetJs.html", "3D.html", "contact.html"]
+
+let current = 1;
+
+const textStyle = () => {
+    heading.style.color = colors[current - 1]; // changement couleur et contenue du heading //
+    heading.textContent = techs[current - 1];
+    btnHeading.textContent = techs[current - 1]; // changement couleur et contenue du heading bouton //
+    btnHeading.style.color = colors[current - 1];
+    btn.style.backgroundColor = colors[current - 1]; // changement couleur du bouton //
+    const btnHref = btn.getAttribute("href");  // changement de l'url du boutons //
+    btn.setAttribute("href", url[current -1]);
+    // fin du changement //
+}
+
+let interval = setInterval(() =>{
+    boxes.forEach((box) => {
+        if(current > boxes.length) current =1;
+        if(box.classList[1].split("-")[1] * 1 === current){ 
+            box.classList.add("active"); // ajoute la class active 
+        } else{
+            box.classList.remove("active"); // retire la class active //
+        }
+    });
+    textStyle(); // appelle de text style //
+    current++; // incrémentation //
+}, 5000); // interval 5s //
+
+boxes.forEach((box) => {
+    box.addEventListener("click", () =>{
+        boxes.forEach((cube) => {
+            cube.classList.remove("active");
+        });
+        box.classList.add("active");
+
+        current = box.classList[1].split("-") [1] * 1;
+
+        textStyle();
+
+        clearInterval(interval);
+    });
+});

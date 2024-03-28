@@ -25,7 +25,7 @@
         color: $primary-color;
     }
 
-    &__text{
+    &__text{ // balise de text //
         width: 70vw;
         font-size: 3vw;
         text-align: center;
@@ -34,38 +34,46 @@
         filter: drop-shadow(2px 1px 4px $background);
     }
 
-    &__change{
+    &__change{ // text changeant lié aux cubes //
         color: $primary-color;
+        transition: color .2s ;
     }
 
-    &__btn{
+    &__btn{ // btn lié aux cubes //
         width: 15rem;
-        height: 4rem;
+        min-height: 4rem;
+        padding: 2rem;
         z-index: 1;
         background-color: $primary-color;
-        color: $text-subtle;
+        color: $text;
         font-size: 1.4rem;
         text-transform: uppercase;
         font-family: "Metal Mania", system-ui;
         border: none;
+        border-radius: 10px;
         margin-top: 3.5rem;
+        transition: background-color .3s;
+        cursor: pointer;
+        text-align: center;
     }
 
     &__btn-change{
-        color: $secondary-color;
+        filter: invert(100%);
     }
 
 
     &__img{
         width: 40vw;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 0;
         z-index: 0;
     }
 }
 
+// partie des cube animé
 .boxes{
+    margin-top: 25vh;
     width: 40%;
     height: 100%;
     z-index: 1;
@@ -73,9 +81,79 @@
     perspective: 150rem;
 }
 
+.active.box{
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+
 .box{
     transform-style: preserve-3d;
     transform: rotateY(45deg) rotateX(30deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+@keyframes boxAnim{
+    0%{
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    100%{
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+.box-1{
+    left: -25rem;
+    top: -6rem;
+    animation: boxAnim 100s infinite linear;
+}
+
+.box-2{
+    left: -11rem;
+    top: -23rem;
+    animation: boxAnim 100s -10s infinite linear;
+}
+
+.box-3{
+    left: 10rem;
+    top: -23rem;
+    animation: boxAnim 100s -20s infinite linear;
+}
+
+.box-4{
+    left: 25rem;
+    top: -6rem;
+    animation: boxAnim 100s -30s infinite linear;
+}
+
+.box-5{
+    left: 22rem;
+    top: 13rem;
+    animation: boxAnim 100s -40s infinite linear;
+}
+
+.box-6{
+    left: 0;
+    top: 25rem;
+    animation: boxAnim 100s -50s infinite linear;
+}
+
+.box-7{
+    left: -21rem;
+    top: 14rem;
+    animation: boxAnim 100s -60s infinite linear;
+}
+
+.active.box div{
+    width: 16rem;
+    height: 16rem;
+    transition: all .2s .5s ease-in-out;
 }
 
 .box div{
@@ -83,9 +161,99 @@
     height: 7rem;
     background-color: $primary-color;
     position: absolute;
+    opacity: 0.8;
+    box-shadow: .1rem .1rem .1rem #eee inset,
+                -.1rem -.1rem .1rem #eee inset,
+                .1rem .1rem 3.5rem rgba(255, 255, 255, .2),
+                -.1rem -.1rem 3.5rem rgba(255, 255, 255, .2);
+}
+
+.box-1 div{
+    // Présentation //
+    background-color: $secondary-color;
+}
+
+.box-2 div{
+    // Boutons //
+    background-color: $primary-color;
+}
+
+.box-3 div{
+    // Effet Parrallax //
+    background-color: $box-color-1;
+}
+
+.box-4 div{
+    // Toggle //
+    background-color: $box-color-2;
+}
+
+.box-5 div{
+    // Effet JS //
+    background-color: $box-color-3;
+}
+
+.box-6 div{
+    // 3D //
+    background-color: $box-color-4;
+}
+
+.box-7 div{
+    // Contact //
+    background-color: $box-color-5;
 }
 
 .top-side{
-    transform: rotateX(90deg) translateZ(35rem);
-    background-color: red;
+    transform: rotateX(90deg) translateZ(3.5rem);
 }
+
+.bottom-side{
+    transform: rotateX(90deg) translateZ(-3.5rem);
+}
+
+.front-side{
+    transform: translateZ(3.5rem);
+}
+
+.back-side{
+    transform: translateZ(-3.5rem);
+}
+
+.right-side{
+    transform: rotateY(-90deg) translateX(3.5rem);
+    transform-origin: right;
+}
+
+.left-side{
+    transform: rotateY(90deg) translateX(-3.5rem);
+    transform-origin: left;
+}
+
+
+.active .top-side{
+    transform: rotateX(90deg) translateZ(8rem);
+}
+
+.active .bottom-side{
+    transform: rotateX(90deg) translateZ(-8rem);
+}
+
+.active .front-side{
+    transform: translateZ(8rem);
+}
+
+.active .back-side{
+    transform: translateZ(-8rem);
+}
+
+.active .right-side{
+    transform: rotateY(-90deg) translateX(8rem);
+    transform-origin: right;
+}
+
+.active .left-side{
+    transform: rotateY(90deg) translateX(-8rem);
+    transform-origin: left;
+}
+
+// fin partie des cubes //
