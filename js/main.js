@@ -78,32 +78,37 @@ boxes.forEach((box) => {
 });
 
 
-//page btn link //
+//bouton copier//
 
+const copyButtonLabel = "Copier Code SCSS";
+
+// use a class selector if available
 let blocks = document.querySelectorAll("pre");
-let text = document.querySelectorAll("code");
-let btns = document.querySelectorAll(".bouton__js")
 
-console.log (blocks);
-console.log (text);
-console.log (btns);
+blocks.forEach((block) => {
+  // only add button if browser supports Clipboard API
+  if (navigator.clipboard) {
+    let button = document.createElement("button");
 
-btns.forEach(element =>{
-    element.addEventListener("click", () =>{
-        text.innerText = copyElement;
-        console.log(text)
-    })
-})
-
- blocks.forEach((block) => {
-  
-    block.innerText = copyButtonLabel;
+    button.innerText = copyButtonLabel;
     block.appendChild(button);
 
     button.addEventListener("click", async () => {
       await copyCode(block, button);
     });
-   }
- );
+  }
+});
 
+async function copyCode(block, button) {
+  let code = block.querySelector("code");
+  let text = code.innerText;
 
+  await navigator.clipboard.writeText(text);
+
+  // visual feedback that task is completed
+  button.innerText = "Code copier";
+
+  setTimeout(() => {
+    button.innerText = copyButtonLabel;
+  }, 700);
+}
