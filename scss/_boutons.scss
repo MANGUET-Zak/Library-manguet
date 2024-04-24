@@ -18,6 +18,10 @@
     margin: 0 auto;
 }
 
+pre{
+    display: none;
+}
+
 .bouton{ // espacement interne des btn //
     padding: 2rem;
     display: flex;
@@ -102,7 +106,6 @@
         border-radius: 40rem;
         box-shadow: #a6a9ac 0 -12px 6px inset;
         padding: 1rem 2rem;
-        
         cursor: pointer;
         transition: all .1s;
         
@@ -116,4 +119,24 @@
             transform: scale(1.025);
         }
     } // fin btn numéro 5 //
+
+    &__6{ // btn numéro 6 //
+        background-color: #000;
+        border: 5px solid #e9a33a ;
+        color: #fff;
+        border-radius: 50rem;
+        padding: 2rem 2.5rem;
+        
+        cursor: pointer;
+        transition: all .2s ease-out;
+        
+        &:hover{
+            background-color: #e9a33a;
+        }
+
+        &:active{
+            background-color: #000;
+            border: 5px solid #000;
+        }
+    } // fin btn numéro 6 //
 }

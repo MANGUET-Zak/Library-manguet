@@ -272,7 +272,7 @@ header nav ul a:hover {
     font-size: 3vw;
   }
   .boxes {
-    margin-top: 25vh;
+    margin-top: 50vh;
     width: 40%;
     height: 100%;
     z-index: 1;
@@ -414,6 +414,11 @@ header nav ul a:hover {
     transform-origin: left;
   }
 }
+@media screen and (min-width: 1440px) {
+  .boxes {
+    margin-top: 30vh;
+  }
+}
 .page {
   margin-top: 20rem;
 }
@@ -430,6 +435,10 @@ header nav ul a:hover {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+pre {
+  display: none;
 }
 
 .bouton {
@@ -518,4 +527,20 @@ header nav ul a:hover {
 }
 .bouton__5:active {
   transform: scale(1.025);
+}
+.bouton__6 {
+  background-color: #000;
+  border: 5px solid #e9a33a;
+  color: #fff;
+  border-radius: 50rem;
+  padding: 2rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.bouton__6:hover {
+  background-color: #e9a33a;
+}
+.bouton__6:active {
+  background-color: #000;
+  border: 5px solid #000;
 }/*# sourceMappingURL=main.css.map */

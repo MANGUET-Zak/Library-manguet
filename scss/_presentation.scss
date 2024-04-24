@@ -84,7 +84,7 @@
 
     // partie des cube animé
     .boxes{
-        margin-top: 25vh;
+        margin-top: 50vh;
         width: 40%;
         height: 100%;
         z-index: 1;
@@ -269,4 +269,11 @@
 
     // fin partie des cubes //
 
+}
+
+
+@media screen and (min-width:1440px){
+    .boxes{
+        margin-top: 30vh;
+    }
 }

@@ -76,3 +76,34 @@ boxes.forEach((box) => {
         clearInterval(interval);
     });
 });
+
+
+//page btn link //
+
+let blocks = document.querySelectorAll("pre");
+let text = document.querySelectorAll("code");
+let btns = document.querySelectorAll(".bouton__js")
+
+console.log (blocks);
+console.log (text);
+console.log (btns);
+
+btns.forEach(element =>{
+    element.addEventListener("click", () =>{
+        text.innerText = copyElement;
+        console.log(text)
+    })
+})
+
+ blocks.forEach((block) => {
+  
+    block.innerText = copyButtonLabel;
+    block.appendChild(button);
+
+    button.addEventListener("click", async () => {
+      await copyCode(block, button);
+    });
+   }
+ );
+
+
