@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarie Manguet Toggle</title>
+    <link rel="icon" href="img/logo/logo.png">
+    <meta name="description" content="Découvrez une variété de toggle élégants et fonctionnels pour améliorer l'intéractvitée sur vos site web.">
+    <!-- ici lien google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+    <!-- ici lien vers le main.css -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- ici lien vers le main.JS -->
+    <script src="js/main.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <img src="img/logo/logo.png" alt="Le logo">
+
+        <p id="ouverture_menu" class="burger"></p>
+
+        <nav id="menu">
+            <ul>
+                <li id="fermeture_menu"></li>
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="boutons.html">Boutons</a></li>
+                <li><a href="burger.html">Burger</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="3D.html">3D</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="page">
+
+        <section class="toggles">
+
+            <div class="toggle">
+
+                <div class="toggle__1">
+                    <input id="switch" type="checkbox">
+                    <label class="toggle__1--love-heart" for="switch">
+                      <i class="toggle__1--left"></i>
+                      <i class="toggle__1--right"></i>
+                      <i class="toggle__1--bottom"></i>
+                      <div class="toggle__1--round"></div>
+                    </label>
+                  </div>
+
+                <p class="toggle__nom">barisdogansutcu</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__1{ //début toggle 1 //
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--love-heart:before,#switch {
+        display: none;
+    }
+        
+    &--love-heart, .toggle__1--love-heart::after {
+        border-color: hsl(231deg 28% 86%);
+        border: 1px solid;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        width: 10px;
+        height: 8px;
+        border-bottom: 0
+        }
+        
+    &--round {
+        position: absolute;
+        z-index: 1;
+        width: 8px;
+        height: 8px;
+        background: hsl(0deg 0% 100%);
+        box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+        border-radius: 100%;
+        left: 0px;
+        bottom: -1px;
+        transition: all .5s ease;
+        animation: check-animation2 .5s forwards;
+    }
+        
+    input:checked + label .toggle__1--round {
+        transform: translate(0px, 0px);
+        animation: check-animation .5s forwards;
+        background-color: hsl(0deg 0% 100%);
+    }
+        
+    @keyframes check-animation {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        
+        50% {
+            transform: translate(0px, 7px);
+        }
+        
+        100% {
+            transform: translate(7px, 7px);
+        }
+    }
+        
+    @keyframes check-animation2 {
+        0% {
+            transform: translate(7px, 7px);
+        }
+        
+        50% {
+            transform: translate(0px, 7px);
+        }
+        
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+        
+    &--love-heart {
+        box-sizing: border-box;
+        position: relative;
+        transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+        display: block;
+        border-color: hsl(231deg 28% 86%);
+        cursor: pointer;
+        top: 0;
+    }
+        
+    input:checked + .toggle__1--love-heart, input:checked + .toggle__1--love-heart::after, input:checked + .toggle__1--love-heart .toggle__1--bottom {
+        border-color: hsl(347deg 81% 61%);
+        box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+    }
+        
+    &--love-heart::after, .toggle__1--love-heart .toggle__1--bottom {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border-color: hsl(231deg 28% 86%);
+    }
+        
+    &--love-heart::after {
+        right: -9px;
+        transform: rotate(90deg);
+        top: 7px;
+    }
+        
+    &--love-heart .toggle__1--bottom {
+        width: 11px;
+        height: 11px;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        border-color: hsl(231deg 28% 86%);
+        left: -1px;
+        top: 5px;
+        border-radius: 0px 0px 0px 5px;
+    }
+        
+} // fin toggle 1 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="toggle">
+
+                    <label class="toggle__2">
+                        <input type="checkbox">
+                        <span class="toggle__2--slider"></span>
+                    </label>
+
+                <p class="toggle__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__2{ //début toggle 2 //
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.5rem;
+        
+        
+    & input {
+        display: none;
+    }
+        
+        /* The slider */
+    &--slider {
+        background: black;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        transition: .5s;
+        border-radius: 30rem;
+        border: 1px solid black;
+    }
+        
+    &--slider:before {
+        position: absolute;
+        content: "";
+        height: 2.4rem;
+        width: 2.4rem;
+        border-radius: 50%;
+        left: 10%;
+        bottom: 15%;
+        box-shadow: inset 8px -4px 0px 0px white;
+        background: black;
+        transition: .5s;
+    }
+        
+    input:checked + .toggle__2--slider {
+        background-color: white;
+    }
+        
+    input:checked + .toggle__2--slider:before {
+        transform: translateX(100%);
+        box-shadow: inset 15px -4px 0px 15px #000000;
+    }
+} // fin toggle 2 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="toggle">
+
+                <label class="toggle__3">
+                    <input type="checkbox">
+                    <span class="toggle__3--slider"></span>
+                </label>
+
+            <p class="toggle__nom">Zak Manguet</p>
+
+            <pre >
+                <code class="CSS">
+
+
+&__3{ //début toggle 3 //
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 8rem;
+    height: 4rem;
+    cursor: pointer;
+        
+        
+    & input {
+        display: none;
+    }
+        
+    &--slider {
+        background: black;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: .5s;
+        background-color: #fff;
+        border: 3px solid #222;
+        border-radius: 30px 100px 100px 100px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+        
+    &--slider:before {
+        position: absolute;
+        content: "";
+        height: 2.8rem;
+        width: 2.8rem;
+        left: 5%;
+        bottom: 10%;
+        border: 3px solid black;
+        border-radius: 30px 100px 100px 100px;
+        background-color: #81d0fd;
+        transition: .5s;
+    }
+        
+    input:checked + .toggle__3--slider {
+        background-color: #81d0fd;
+        border-radius: 100px 100px 30px 100px;
+    }
+        
+    input:checked + .toggle__3--slider:before {
+        left: 56%;
+        background-color: #fff;
+        border-radius: 100px 100px 30px 100px;
+    }
+        
+} // fin toggle 3 //
+                </code>
+            </pre>
+
+        </div>
+
+        <div class="toggle">
+
+            <label class="toggle__4">
+                <input type="checkbox">
+                <span class="toggle__4--slider"></span>
+            </label>
+
+        <p class="toggle__nom">Zak Manguet</p>
+
+        <pre >
+            <code class="CSS">
+
+
+&__4{ //début toggle 4 //
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 8rem;
+    height: 4rem;
+    cursor: pointer;
+        
+        
+    & input {
+        display: none;
+    }
+        
+    &--slider {
+        background: black;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: .5s;
+        background-color: black;
+        border: 1px solid grey;
+        border-radius: 50rem;
+    }
+        
+    &--slider:before {
+        position: absolute;
+        content: "";
+        height: 2.8rem;
+        width: 2.8rem;
+        left: 5%;
+        bottom: 12%;
+        border-radius: 50%;
+        background-color: white;
+        transition: .5s;
+    }
+        
+    input:checked + .toggle__4--slider {
+        box-shadow: 0 0 20px #09f124;
+        border: 2px solid #00ff1e;
+    }
+        
+    input:checked + .toggle__4--slider:before {
+        left: 56%;
+        background-color: #fff;
+    }
+        
+} // fin toggle 4 //
+            </code>
+        </pre>
+
+    </div>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>

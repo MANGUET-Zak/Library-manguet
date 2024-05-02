@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librarie Manguet Boutons</title>
+    <link rel="icon" href="img/logo/logo.png">
+    <meta name="description" content="Découvrez une variété de boutons élégants et fonctionnels pour améliorer l'interaction utilisateur sur vos site web.">
     <!-- ici lien google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +29,9 @@
                 <li id="fermeture_menu"></li>
                 <li><a href="index.html">Présentation</a></li>
                 <li><a href="boutons.html">Boutons</a></li>
-                <li><a href="effetParrallax.html">Effet parrallax</a></li>
+                <li><a href="burger.html">Burger</a></li>
                 <li><a href="toggle.html">Toggle</a></li>
-                <li><a href="effetJs.html">Effet JS</a></li>
+                <li><a href="cards.html">Cards</a></li>
                 <li><a href="3D.html">3D</a></li>
                 <li><a href="contact.html">contact</a></li>
             </ul>
@@ -543,6 +545,158 @@ transition: all .3s;
 
 
 } // fin btn numéro 12 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="bouton">
+
+                <button class="bouton__js bouton__13">
+                    <svg width="40" height="40" fill="#0092E4" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" id="github">
+                        <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+                    </svg>
+                    <span class="bouton__13--span">bouton 13</span>
+                </button>
+
+                <p class="bouton__nom">Zak Manguet</p>
+
+                <pre>
+                    <code class="CSS">
+
+
+&__13{ // btn numéro 13 //
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e3edf7;
+    padding: 1.4rem;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover{
+        box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+        inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+        -0.5px -0.5px 0px rgba(255,255,255,1),
+        0.5px 0.5px 0px rgba(0,0,0,0.15),
+        0px 12px 10px -10px rgba(0,0,0,0.05);
+        border: 1px solid rgba(0,0,0,0.1);
+        transform: translateY(0.5rem);
+    }
+
+    & svg{
+        transition: transform 0.5s;
+    }
+
+    & span{
+        color: #0092E4;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    &:hover svg{
+        transform: scale(0.9);
+        fill: black;
+        transition: all 0.5s;
+    }
+
+    &:hover span{
+        color: black;
+        transition: all 0.5s;
+    }
+
+} // fin btn numéro 13 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="bouton">
+
+                <button class="bouton__js bouton__14">
+                    <span class="bouton__14--span">
+                        <svg viewBox="0 0 384 512" height="0.9em" class="bouton__14--svg">
+                            <path
+                            d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z">
+                            </path>
+                        </svg>
+                    </span>
+                    <p class="bouton__14--text">bouton 14</p>
+                </button>
+
+                <p class="bouton__nom">Zak Manguet</p>
+
+                <pre>
+                    <code class="CSS">
+
+
+&__14{ // btn numéro 14 //
+    width: 15rem;
+    height: 4rem;
+    border-radius: 4rem;
+    border: 1px solid #9898986c;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &--span{
+        width: 3rem;
+        height: 3rem;
+        background: linear-gradient(180deg, rgba(64,255,221,1) 0%, rgb(38, 188, 161) 100%);
+        border-radius: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 2;
+        transition-duration: 0.3s;
+    }
+
+    &--svg{
+        border-radius: 1px;
+    }
+
+    &--text{
+        height: 100%;
+        width: 11rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 1;
+        transition-duration: 0.3s;
+        font-size: 1.6rem;
+    }
+
+    &:hover .bouton__14--span{
+        width: 14rem;
+        transition-duration: 0.3s;
+    }
+
+    &:hover .bouton__14--text{
+        transform: translate(10px);
+        width: 0;
+        font-size: 0;
+        transition-duration: 0.3s;
+    }
+
+    &:active{
+        transform: scale(0.95);
+        transition-duration: 0.3s;
+    }
+
+} // fin btn numéro 14 //
                     </code>
                 </pre>
 

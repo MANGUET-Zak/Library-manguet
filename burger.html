@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librarie Manguet Parallax</title>
+    <link rel="icon" href="img/logo/logo.png">
+    <meta name="description" content="Découvrez une variété d'effet parallax élégants et fonctionnels pour améliorer le design sur vos site web.">
+    <!-- ici lien google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+    <!-- ici lien vers le main.css -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- ici lien vers le main.JS -->
+    <script src="js/main.js" defer></script>
+
+</head>
+<body>
+
+    <header>
+        <img src="img/logo/logo.png" alt="Le logo">
+
+        <p id="ouverture_menu" class="burger"></p>
+
+        <nav id="menu">
+            <ul>
+                <li id="fermeture_menu"></li>
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="boutons.html">Boutons</a></li>
+                <li><a href="burger.html">Burger</a></li>
+                <li><a href="toggle.html">Toggle</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="3D.html">3D</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="page">
+
+        <section class="burgers">
+
+            <div class="burger">
+
+                <input type="checkbox" id="checkbox" class="burger__1--checkbox">
+                <label for="checkbox" class="burger__1">
+                    <div class="burger__1--bar burger__1--top"></div>
+                    <div class="burger__1--bar burger__1--middle"></div>
+                    <div class="burger__1--bar burger__1--bottom"></div>
+                </label>
+    
+                <p class="burger__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__1{ // début burger 1 //
+    position: relative;
+    width: 4rem;
+    cursor: pointer;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition-duration: 0.3s;
+
+    &--checkbox{
+        display: none;
+    }
+
+    &--bar{
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        border-radius: 5rem;
+        transition-duration: 0.3s;
+    }
+}
+
+#checkbox:checked + .burger__1 .burger__1--bar{
+    margin-left: 1.3rem;
+}
+
+#checkbox:checked + .burger__1 .burger__1--middle{
+    transform: rotate(135deg);
+    margin-left: 0;
+    transform-origin: center;
+    transition-duration: 0.3s;
+}
+
+#checkbox:checked + .burger__1 .burger__1--top {
+    transform: rotate(45deg);
+    transition-duration: 0.3s;
+    transform-origin: left center;
+}
+    
+#checkbox:checked + .burger__1 .burger__1--bottom {
+    transform: rotate(-45deg);
+    transition-duration: 0.3s;
+    transform-origin: left center;
+} // fin burger 1 //
+                    </code>
+                </pre>
+    
+
+            </div>
+
+            <div class="burger">
+
+                <input type="checkbox" id="checkbox-2" class="burger__2--checkbox">
+                <label for="checkbox-2" class="burger__2">
+                    <div class="burger__2--bar burger__2--top"></div>
+                    <div class="burger__2--bar burger__2--middle"></div>
+                    <div class="burger__2--bar burger__2--bottom"></div>
+                </label>
+    
+                <p class="burger__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+                        
+&__2{ // début burger 2 //
+    position: relative;
+    width: 4rem;
+    cursor: pointer;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition-duration: 0.3s;
+    overflow: hidden;
+
+    &--checkbox{
+        display: none;
+    }
+
+    &--bar{
+        width: 100%;
+        height: 4px;
+        background-color: black;
+        border-radius: 5rem;
+    }
+
+    &--top , &--bottom{
+        width: 70%;
+    }
+
+    &--middle{
+        transition-duration: 0.8s;
+    }
+}
+
+#checkbox-2:checked + .burger__2 .burger__2--bar{
+    position: absolute;
+    transition-duration: 0.5s;
+}
+
+#checkbox-2:checked + .burger__2 .burger__2--middle{
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+}
+
+#checkbox-2:checked + .burger__2 .burger__2--top {
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+    width: 100%;
+}
+    
+#checkbox-2:checked + .burger__2 .burger__2--bottom {
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+    width: 100%;
+} 
+
+#checkbox-2:checked + .burger__2{
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+}// fin burger 2 //
+                    </code>
+                </pre>
+    
+
+            </div>
+
+            <div class="burger">
+
+                <input type="checkbox" id="checkbox-3" class="burger__3--checkbox">
+                <label for="checkbox-3" class="burger__3">
+                    <div class="burger__3--bar burger__3--top"></div>
+                    <div class="burger__3--bar burger__3--middle"></div>
+                    <div class="burger__3--bar burger__3--bottom"></div>
+                </label>
+    
+                <p class="burger__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+                        
+&__3{ // début burger 3 //
+    position: relative;
+    width: 4rem;
+    cursor: pointer;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition-duration: 0.3s;
+
+    &--checkbox{
+        display: none;
+    }
+
+    &--bar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: black;
+        border-radius: 5rem;
+        opacity: 1;
+        transition: none 0.3s cubic-bezier(0.5, -0.3, 0.3, 1.5) 0s;
+    }
+
+    &--top{
+        bottom: calc(50% + 11px + 4px/ 2);
+        transition-property: bottom,transform;
+        transition-delay: 0s;
+    }
+
+    &--middle{
+        top: calc(50% - 4px/ 2);
+        transition-property: opacity,transform;
+        transition-duration: 0.5s;
+    }
+
+    &--bottom{
+        top: calc(50% + 11px + 4px/ 2);
+        transition-property: top,transform;
+        transition-delay: 0s;
+    }
+}
+
+#checkbox-3:checked + .burger__3 .burger__3--middle{
+    opacity: 0;
+    transform: rotate(-135deg);
+    transition-delay: 0.3s;
+}
+
+#checkbox-3:checked + .burger__3 .burger__3--top {
+    transform: rotate(-135deg);
+    transition-delay: 0s;
+    bottom: calc(50% - 4px/ 2);
+}
+    
+#checkbox-3:checked + .burger__3 .burger__3--bottom {
+    top: calc(50% - 4px/ 2);
+    transform: rotate(-225deg);
+    transition-delay: 0.3s;
+} // fin burger 3 //
+                    </code>
+                </pre>
+    
+
+            </div>
+
+            <div class="burger">
+
+                <input type="checkbox" id="checkbox-4" class="burger__4--checkbox">
+                <label for="checkbox-4" class="burger__4">
+                    <div class="burger__4--bar burger__4--top"></div>
+                    <div class="burger__4--bar burger__4--middle"></div>
+                    <div class="burger__4--bar burger__4--bottom"></div>
+                </label>
+    
+                <p class="burger__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+                        
+&__4{ // début burger 4 //
+    position: relative;
+    width: 4rem;
+    cursor: pointer;
+    margin: auto;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+
+    &:hover{
+        border: 1px solid white;
+    }
+
+    &:active{
+        color: #666;
+        box-shadow: inset 4px 4px 12px #c5c5c5,
+                    inset -4px -4px 12px #ffffff;
+    }
+
+    &--checkbox{
+        display: none;
+    }
+
+    &--bar{
+        width: 3rem;
+        height: 0.4rem;
+        background: #131313;
+        border-radius: 10rem;
+        transition: 0.3s ease;
+    }
+}
+
+#checkbox-4:checked + .burger__4 .burger__4--middle{
+    transform: translateX(-2rem);
+    opacity: 0;
+}
+
+#checkbox-4:checked + .burger__4 .burger__4--top {
+    transform: translateY(1.35rem) rotate(45deg);
+    width: 4rem;
+}
+    
+#checkbox-4:checked + .burger__4 .burger__4--bottom {
+    transform: translateY(-1.35rem) rotate(-45deg);
+    width: 4rem;
+    box-shadow: 0 0 1rem #495057;
+} // fin burger 4 //
+                    </code>
+                </pre>
+    
+
+            </div>
+
+            <div class="burger">
+
+                <input type="checkbox" id="checkbox-5" class="burger__5--checkbox">
+                <label for="checkbox-5" class="burger__5">
+                    <div class="burger__5--bar burger__5--top"></div>
+                    <div class="burger__5--bar burger__5--middle"></div>
+                    <div class="burger__5--bar burger__5--bottom"></div>
+                </label>
+    
+                <p class="burger__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+                        
+&__5{ // début burger 5 //
+    position: relative;
+    cursor: pointer;
+    width: 7rem;
+    height: 7rem;
+    background-color: rgb(76, 112, 253);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &--checkbox{
+        display: none;
+    }
+
+    &--bar{
+        position: absolute;
+        height: 2px;
+        background-color: white;
+        border-radius: 1rem;
+        transition: 0.5s;
+    }
+
+    &--top{
+        width: 2.5rem;
+        left: 1.5rem;
+        top: 2rem;
+    }
+
+    &--middle{
+        width: 4rem;
+        top: 4rem;
+    }
+}
+
+#checkbox-5:checked + .burger__5 .burger__5--middle{
+    width: 4rem;
+    transform: translateY(0rem) rotate(315deg);
+    top: 3.3rem;
+    transition-delay: 0.1s;
+}
+
+#checkbox-5:checked + .burger__5 .burger__5--top {
+    width: 4rem;
+    transform: translateY(0rem) rotate(45deg);
+    top: 3.3rem;
+    transition-delay: 0.1s;
+} // fin burger 5 //
+                    </code>
+                </pre>
+    
+
+            </div>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>

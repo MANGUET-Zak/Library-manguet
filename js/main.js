@@ -32,9 +32,9 @@ const btnHeading = document.querySelector(".presentation__btn span");
 
 const colors = ["#64FF57", "#4F4481", "#2368FB", "#FF321A", "#FE86FF", "#04EEFF", "#FFCD01"];
 
-const techs = ["Présentation", "Boutons", "Effet Parrallax", "Toggle", "Effet JS", "3D", "Contact"];
+const techs = ["Présentation", "Boutons", "Burger", "Toggle", "Effet JS", "3D", "Contact"];
 
-const url = ["index.html", "boutons.html", "effetParrallax.html", "toggle.html", "effetJs.html", "3D.html", "contact.html"]
+const url = ["index.html", "boutons.html", "burger.html", "toggle.html", "effetJs.html", "3D.html", "contact.html"]
 
 let current = 1;
 
