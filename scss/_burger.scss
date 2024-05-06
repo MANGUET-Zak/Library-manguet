@@ -332,3 +332,13 @@ code{
         transition-delay: 0.1s;
     } // fin burger 5 //
 }
+
+@media screen and (min-width:1024px){
+    
+    pre{
+        max-width: 30rem;
+        max-height: 30rem;
+        
+    }
+
+}
