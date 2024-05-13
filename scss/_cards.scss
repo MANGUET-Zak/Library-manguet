@@ -375,6 +375,202 @@ code{
     
         
     } // fin card 5 //
+
+    &__6{ // début card 6 //
+        width: 25rem;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        line-height: 1.2;
+        transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2.4rem;
+            padding: 3.6rem;
+            border-radius: 12px;
+            color: white;
+            overflow: hidden;
+            background: black;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+
+            &::before{
+                position: absolute;
+                content: "";
+                top: -4%;
+                left: 50%;
+                width: 90%;
+                height: 90%;
+                transform: translate(-50%);
+                background: #0000006e;
+                z-index: -1;
+                transform-origin: bottom;
+                border-radius: inherit;
+                transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            &::after{
+                position: absolute;
+                content: "";
+                top: -8%;
+                left: 50%;
+                width: 80%;
+                height: 80%;
+                transform: translate(-50%);
+                background: #0000002c;
+                z-index: -2;
+                transform-origin: bottom;
+                border-radius: inherit;
+                transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+        }
+
+        &-svg{
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &-content .card__6-text{
+            z-index: 1;
+            opacity: 1;
+            font-size: 1.6rem;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        &:hover{
+            transform: translate(0px, -1.6rem);
+        }
+
+        &:hover .card__6-content::before{
+            rotate: -8deg;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover .card__6-content::after{
+            rotate: 8deg;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    
+        
+    } // fin card 6 //
+
+    &__7{ // début card 7 //
+        width: 19rem;
+        height: 25rem;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        perspective: 100rem;
+
+        &-title{
+            font-size: 2rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        &-inner{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        &:hover .card__7-inner{
+            transform: rotateY(180deg);
+        }
+
+        &-front, .card__7-back{
+            box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border: 1px solid rgb(144, 80, 255);
+            border-radius: 1rem;
+        }
+
+        &-front{
+            background: linear-gradient(180deg, rgba(144,80,255,1) 0%, rgba(127,66,236,1) 50%, rgba(174,138,237,1) 100%);
+            color: black;
+        }
+
+        &-back{
+            background: linear-gradient(180deg, rgba(174,138,237,1) 0%, rgba(127,66,236,1) 50%, rgba(144,80,255,1) 100%);
+            color: black;
+            transform: rotateY(180deg);
+        }
+        
+    } // fin card 7 //
+
+    &__8{ // début card 8 //
+        width: 30rem;
+        height: 19rem;
+        position: relative;
+        cursor: pointer;
+        background-image: url(/img/small-background-cards.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        margin-bottom: 6rem; // ajout pour aligner inutile sur le code///
+
+        &:hover{
+            transform: rotate(-5deg) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+            & .card__8-content{
+                transform: translate(-50%, -50%) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        &-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            width: 100%;
+            height: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: white;
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        &-title{
+            font-size: 2.4rem;
+            color: black;
+            font-weight: 700;
+        }
+
+        &-description{
+            margin: 1rem 0 0 0;
+            font-size: 1.6rem;
+            color: black;
+            line-height: 1.4;
+        }
+        
+    } // fin card 8 //
     
 }
 

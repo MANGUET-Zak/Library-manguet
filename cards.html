@@ -463,6 +463,266 @@ to {
 
             </div>
 
+            <div class="card">
+
+                <div class="card__6">
+                    <div class="card__6-content">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="card__6-svg">
+                            <path d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24V64 350.5 400v88c0 13.3 10.7 24 24 24s24-10.7 24-24V388l80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30V66.1c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52V24zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8V334.7l-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5v-237z"/>
+                        </svg>
+                      <p class="card__6-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam at voluptas minus culpa deserunt delectus sapiente inventore pariatur</p>
+                    </div>
+                </div>
+
+                <p class="bouton__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__6{ // début card 6 //
+    width: 25rem;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    line-height: 1.4;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.4rem;
+        padding: 3.6rem;
+        border-radius: 12px;
+        color: white;
+        overflow: hidden;
+        background: black;
+        transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+
+        &::before{
+            position: absolute;
+            content: "";
+            top: -4%;
+            left: 50%;
+            width: 90%;
+            height: 90%;
+            transform: translate(-50%);
+            background: #0000006e;
+            z-index: -1;
+            transform-origin: bottom;
+            border-radius: inherit;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: -8%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            transform: translate(-50%);
+            background: #0000002c;
+            z-index: -2;
+            transform-origin: bottom;
+            border-radius: inherit;
+            transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+
+    &-svg{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &-content .card__6-text{
+        z-index: 1;
+        opacity: 1;
+        font-size: 1.6rem;
+        transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &:hover{
+        transform: translate(0px, -1.6rem);
+    }
+
+    &:hover .card__6-content::before{
+        rotate: -8deg;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover .card__6-content::after{
+        rotate: 8deg;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    
+} // fin card 6 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card__7">
+                    <div class="card__7-inner">
+                        <div class="card__7-front">
+                            <p class="card__7-title">Front</p>
+                            <p class="card__7-text">survole</p>
+                        </div>
+                        <div class="card__7-back">
+                            <p class="card__7-title">Back</p>
+                            <p class="card__7-text">quitter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="bouton__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__7{ // début card 7 //
+    width: 19rem;
+    height: 25rem;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    perspective: 100rem;
+
+    &-title{
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    &-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    &:hover .card__7-inner{
+        transform: rotateY(180deg);
+    }
+
+    &-front, .card__7-back{
+        box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border: 1px solid rgb(144, 80, 255);
+        border-radius: 1rem;
+    }
+
+    &-front{
+        background: linear-gradient(180deg, rgba(144,80,255,1) 0%, rgba(127,66,236,1) 50%, rgba(174,138,237,1) 100%);
+        color: black;
+    }
+
+    &-back{
+        background: linear-gradient(180deg, rgba(174,138,237,1) 0%, rgba(127,66,236,1) 50%, rgba(144,80,255,1) 100%);
+        color: black;
+        transform: rotateY(180deg);
+    }
+    
+} // fin card 7 //
+                    </code>
+                </pre>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card__8">
+                    <div class="card__8-content">
+                      <p class="card__8-title">Titre</p>
+                      <p class="card__8-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+                </div>
+
+                <p class="bouton__nom">Zak Manguet</p>
+
+                <pre >
+                    <code class="CSS">
+
+
+&__8{ // début card 8 //
+    width: 30rem;
+    height: 19rem;
+    position: relative;
+    cursor: pointer;
+    background-image: url(/img/small-background-cards.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+    &:hover{
+        transform: rotate(-5deg) scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        & .card__8-content{
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    &-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        background-color: white;
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    &-title{
+        font-size: 2.4rem;
+        color: black;
+        font-weight: 700;
+    }
+
+    &-description{
+        margin: 1rem 0 0 0;
+        font-size: 1.6rem;
+        color: black;
+        line-height: 1.4;
+    }
+    
+} // fin card 8 //
+                    </code>
+                </pre>
+
+            </div>
+
         </section>
 
     </main>
